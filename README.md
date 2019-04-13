@@ -1,5 +1,9 @@
 # neu-eone
 A spider can login NEU eone(一网通办) system
+## Python version
+3+
+## Library you need
+* requests
 ## How to use
 ### Import
 Put the file "eone.py" in you project and import it in you project
