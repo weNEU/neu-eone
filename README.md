@@ -2,9 +2,8 @@
 基于python-requests的东北大学各系统的爬虫
 ## Python 版本
 3+
-## 依赖环境
+## 依赖包
 * requests
-如未安装requests请使用pip或下载源码安装
 ## 进展
 已成功爬取以下网页
 * 东北大学图书馆
