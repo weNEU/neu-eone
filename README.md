@@ -22,8 +22,19 @@
 ***
 ### 成员方法与成员变量
 对于每一个neuStu实例，本模块提供了以下实例方法与变量：
-* **card_info** 学生卡信息,这是一个字典对象，*card_balance*代表余额，*sub_card_balance*代表补助余额
-* **net_info**
+* **card_info** 学生卡信息 这是一个字典对象，*card_balance*代表余额，*sub_card_balance*代表补助余额
+* **net_info** 校园网使用信息 这是一个字典对象，*sum_bytes*代表本月使用的总流量（单位：B），*sum_seconds*代表使用总时长（单位：秒），*sum_times*代表连接次数（存疑），*user_balance*校园网账号余额（单位：元），*user_charge*猜测为本月消费
+* **email_info** 这是一个字典对象 *mbox_msgcnt*代表邮箱中的邮件总数。*mbox_msgsize*代表邮箱容量（存疑），*mbox_newmsgcnt*、*mbox_newmsgsize*代表的数值暂不清楚
+* **finance_info** 理论应返回字典对象 目前可能由于学校原因不能使用，不过这项似乎代表了财政报销信息
+* **mobile_info** 这是一个字典对象 *EMAIL*、*ID_NUMBER*、*MOBILE*分别代表了该一网通办账号所绑定的邮箱、学号、手机号。
+* **is_card_lost** 这是一个布尔值 为True代表校园卡已经挂失，为False代表校园卡出于正常状态
+* **user_info** 这是一个字典对象 内容包含了从新教务处所获得的大部分信息，每个键的意义容易理解，在此先不做说明
+* **library_info** 这是一个字典对象 其下正常应包括两个键**extend_url**、**book_data**，前一个键所对应的值代表了续借链接（字符串），通过该链接与书籍代码相连可以实现续借，**book_data**所对应的值是一个数组，数组的每个元素都是字典并代表了当前借阅的所有书籍，对于每本书对应字典每个键的意义，容易字面理解，在此先不做说明
+* **get_course(semester)** 此方法获取一个semester值，此值代表了所查询课表的学期，如2019年春季学期的学期代码为30.方法将返回一个列表，代表了本学期所有课程以及其相关信息如：上课教室，上课周，上课时间，任课教师
+* **get_card_trade(start_date, end_date)** 此方法获取两个参数，分别代表了查询起始日期与结束日期，如你要查询2019年5月1日至2019年5月10日则你需要使用`user.get_card_trade('2019-05-01','2019-05-10')`，此方法将返回一个列表记录交易记录。**注意**：使用此方法查询时间过长或交易量过多将导致响应时间过长，请谨慎使用，或自行使用多线程进行封装（为了学校服务器考虑，强烈不建议使用多线程）
+* **get_door_info(start_date, end_date)** 使用方法与 **get_card_trade(start_date, end_date)** 基本相同，也要注意同样的问题
+* **librar_continue_borrow(book_list)** 此方法接受一个列表，列表中是所借书籍的代码，即**library_info**->**book_data**->**book_code**所对应的值（字符串），如果允许将会对列表中的书籍进行借阅，但由于没有足够的样本，还不能判断是否成功续借，但如果图书馆允许，即可成功借阅
+* **lost_card** 此功能待开发，用于挂失校园卡
 
 ## 开源协议
 MIT  
