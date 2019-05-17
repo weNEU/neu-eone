@@ -1,5 +1,5 @@
 # 东北大学一网通办爬虫
-![avatar](https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=21c72717ab773912d02b8d339970ed7d/8b13632762d0f703464bf4760afa513d2797c59b.jpg)
+<div align=center>![avatar](https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=21c72717ab773912d02b8d339970ed7d/8b13632762d0f703464bf4760afa513d2797c59b.jpg){:height="300px" width="300px"}
 ## 背景
 2019年初，[东北大学](https://www.neu.edu.cn/)为了解决各个学校系统相互独立、账号分散容易忘记的情况，推出了[东北大学一网通办系统](https://eone.neu.edu.cn/).只要有这个系统的密码，就可以直接登陆教务处、图书馆、校园卡服务中心、学生邮箱、BB系统。此爬虫就是利用了这个特点实现的，在此之前，如东大方圆这样的微信小程序必须同时绑定多个账号才能使用全部功能，现在理论上可以只绑定一网通办就能实现大部分功能（不能实现的如：登陆校园网），并且一些技术先进团队如weNEU已经使用这套方案进行信息的获取.
 ## 系统要求
