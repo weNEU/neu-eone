@@ -42,14 +42,14 @@
 `user = neuStu('20190000','a123456')`  
 这时你便可以得到一个neuStu的实例。
 实例化LibrarySearch类只需要传入一个参数，即书籍名称,然后使用get_books(page)方法进行查询,page代表查询的页数，每页十个结果。如果你想知道一共有多少个结果，只需要获取sum这个成员的值即可。下面是一共代码实例
-`
+```
 \# 初始化搜索引擎，搜索与‘java’有关的书籍  
 books = LibrarySearch('java')  
 \# 打印搜索到的书籍数  
 print(books.sum)  
 \# 获取打印第二页的内容  
 print(books.get_books(2))  
-`
+```
 ***
 ### 成员方法与成员变量
 对于每一个neuStu实例，本模块提供了以下实例方法与变量：
