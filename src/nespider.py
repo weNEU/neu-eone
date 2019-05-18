@@ -48,7 +48,7 @@ el1>索书号：<td class=content valign=top>(.*?) \n<tr><td class=label1>出版
     def __init__(self, keyword):
         # 查询参数
         param = '?func=find-b&find_code=WRD&request=%s&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3=&filter_code_4=WFM&filter_request_4=&filter_code_5=WSL&filter_request_5='%keyword
-        query_page = str(requests.get('http://202.118.8.7:8991/F/').content, 'utf8')  # 与line254相同 不能直接获取text 需要手动抓换
+        query_page = str(requests.get('http://202.118.8.7:8991/F/').content, 'utf8')  # 与line254相同 不能直接获取text 需要手动转换
         post_url = re.findall('<form method=get name=form1 action="(.*?)" onsubmit="return presearch\(this\);">', query_page)[0]
         query_res = requests.get(post_url+param)
         query_text = str(query_res.content, 'utf8')
